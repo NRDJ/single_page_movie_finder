@@ -14,10 +14,11 @@ const App = () => {
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/" Style={"margin-left: 5%"}> Movie Finder</Link>
+        <Link className="navbar-brand" Style={"margin-left: 5%"} to="/">Movie Finder</Link>
       </nav>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/movie/:id" component={Movie} />
         <Route component={NotFound} />
       </Switch>
     </Router>
@@ -25,3 +26,6 @@ const App = () => {
 }
 
 export default App;
+
+
+
